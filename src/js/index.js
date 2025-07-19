@@ -47,3 +47,5 @@ console.log(user('JOAO11092005').then(data => {
 user('crunchyroll').then((data => {
     atualizar(data)
   }))
+
+

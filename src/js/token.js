@@ -1,3 +1,14 @@
-const token = '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';
+async function resultToken(){
+    const resultTokenGithub = await fetch('src/js/json/token.json');
 
-export default token;
+    const json = await resultTokenGithub.json()
+
+    // console.log(await json)
+}
+
+// console.log(resultToken())
+
+const token = resultToken().then((db) => {
+});
+export default token
+
