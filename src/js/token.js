@@ -1,0 +1,3 @@
+const token = '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';
+
+export default token;

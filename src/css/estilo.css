@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+header{
+    height: 94px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid blueviolet;
+}
+.logo img{
+     width: 70px;
+     border-radius: 50px;
+}
+.serach{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0px;
+    background-color: white;
+    cursor: pointer;
+}
+input{
+    width: 500px;
+    padding: 10px;
+    /* border-radius: 20px; */
+    border: none;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button{
+    width: 100px;
+    padding: 14px;
+    
+    border: none;
+    height: 100%;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+button:hover{
+    background-color: blue;
+    transition: 0.5s ease-in-out;
+}
+main{
+    background-color: black;
+    height: 90vh;
+    display: flex;
+}
+.perfil{
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.perfil img{
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+.descricao{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.social{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    gap: 30px;
+}
+.seguidores , .seguindo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* font-weight: bold; */
+}
+.fa-solid{
+    color: blueviolet;
+    font-size: 30px;
+    /* width: 30px; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* height: 70px; */
+     /* background-color: rgb(27, 26, 26); */
+     border-radius: 50%;
+}
+.fa-regular{
+    color: yellow;
+     font-size: 30px;
+     width: 70px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* height: 70px; */
+     /* background-color:rgb(27, 26, 26); */
+     border-radius: 50%;
+}
