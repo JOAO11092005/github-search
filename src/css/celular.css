@@ -1,0 +1,30 @@
+@media (max-width: 660px){
+    header{
+        height: 100%;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    input{
+        width: 100%;
+    }
+    .perfil img{
+        width: 60px;
+        height: 60px;
+        margin-top: 20px;
+    }
+    main{
+        height: 100%;
+        padding: 30px;
+        flex-direction: column;
+    }
+    .biografia{
+        width: 90%;
+    }
+    .comites{
+        width: 90%;
+        margin-top: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+}

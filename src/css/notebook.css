@@ -1,0 +1,12 @@
+@media (max-width: 1440px){
+    header{
+        height: 89px;
+    }
+    .perfil img{
+        width: 200px;
+        height: 200px;
+    }
+    main{
+        height: 86vh;
+    }
+}
