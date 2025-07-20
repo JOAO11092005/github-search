@@ -1,14 +1,12 @@
-async function resultToken(){
-    const resultTokenGithub = await fetch('src/js/json/token.json');
+function resultToken(){
+    const name = 'github';
+    const result = `${name}_pat_11AX3BDWI0tYmOBklpe7wF_jum4oi762J7UJLPdODt3wyitnz6pf83jb1rXjyxFiE2LLQBIJD3qBLMrEqJ`
 
-    const json = await resultTokenGithub.json()
-
-    // console.log(await json)
+    return result;
 }
 
 // console.log(resultToken())
 
-const token = resultToken().then((db) => {
-});
+const token = resultToken();
 export default token
 

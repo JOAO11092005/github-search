@@ -4,9 +4,11 @@ const titulo = document.querySelector('h1');
 const bio = document.querySelector('.biografia');
 const idDoUsuario = document.querySelector('.id-do-usuario')
 let valorDigitado = document.querySelector('input');
-
+const comites = document.querySelector('.comites');
 document.querySelector('.search-button').addEventListener('click', function () {
+  comites.innerHTML = ''
   let nome = valorDigitado.value
+  exibirLink(nome)
   user(nome).then((data => {
     atualizar(data)
   }))
@@ -38,14 +40,37 @@ function atualizar(dados) {
   document.querySelector('.seguindoNoGit').innerText = `Seguidores: ${dados.followers}`
 }
 
-console.log(user('JOAO11092005'))
-console.log(user('JOAO11092005').then(data => {
-  console.log(data.avatar_url)
-}))
+async function exibirLink(usuarioGithub){
+  const link = await fetch(`https://api.github.com/users/${usuarioGithub}/repos`)
+   const result = await link.json() 
+  
+   for(let i = 0 ; i <= 5; i++){
+    console.log(result[i]['name']);
+    const commits = [''];
+
+    commits.push(result[i]['name'])
+    criaCommit(result[i]['name'])
+    // document.querySelector('.comites').innerHTML = `
+    // <div class="commit-ativo">
+    //    ${result[i]['name']}
+    // </div>`;
 
 
-user('crunchyroll').then((data => {
-    atualizar(data)
-  }))
+    console.log(commits);
+   }
+}
 
+
+// user('crunchyroll').then((data => {
+//     atualizar(data)
+//   }))
+
+
+function criaCommit(commitGithub){
+    const commit = document.createElement('div');
+    commit.innerHTML = commitGithub;
+    
+    commit.classList.add('commit-ativo');
+    comites.appendChild(commit);
+}
 
