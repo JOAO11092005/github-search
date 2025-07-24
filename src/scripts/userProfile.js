@@ -2,7 +2,7 @@
 function atualizarPerfil(nome, bio, imagemPerfil , seguindo , seguidores) {
     const perfil = document.querySelector('.perfil')
     perfil.innerHTML = `
-            <img src="${imagemPerfil}" alt="Imagem do perfil do github" class="perfil-do-usuario">
+            <img src="${imagemPerfil ?? './src/img/sem-perfil.jpg'}" alt="Imagem do perfil do github" class="perfil-do-usuario">
             
             <h1>${nome ?? 'Nome Indisponivel'}</h1>
 
@@ -16,13 +16,13 @@ function atualizarPerfil(nome, bio, imagemPerfil , seguindo , seguidores) {
     `
                     <div class="seguidores">
                     <i class="fa-solid fa-user" aria-hidden="true"></i> 
-                    <div class="seguidoresNoGit">Seguindo:${seguindo}</div>
+                    <div class="seguidoresNoGit">Seguindo:${seguindo ?? ' Indisponivel'}</div>
                     </div>
 
 
                     <div class="seguindo">
                     <i class="fa-regular fa-user" aria-hidden="true"></i>
-                    <div class="seguindoNoGit">Seguidores:${seguidores}
+                    <div class="seguindoNoGit">Seguidores:${seguidores ?? ' Indisponivel'}
                         </div>
                      </div>
     `
