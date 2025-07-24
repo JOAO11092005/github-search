@@ -13,6 +13,7 @@ async function recebeRepos_Url(link) {
 
 
 function criaRepositori(valor) {
+    
     const divRepo = document.createElement('div');
     divRepo.innerText = valor
     divRepo.classList.add('commit-ativo')
